@@ -1,0 +1,22 @@
+version: '3'
+services:
+  my-web-app-db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=myDB
+    networks:
+      - web-app-network
+  my-web-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - my-web-app-db
+    networks:
+      - web-app-network
+
+networks:
+  web-app-network:
