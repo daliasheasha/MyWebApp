@@ -5,18 +5,11 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=myDB
-    networks:
-      - web-app-network
+    ports:
+    - "3306:3306"
   my-web-app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    build: .
     ports:
       - "8080:8080"
     depends_on:
       - my-web-app-db
-    networks:
-      - web-app-network
-
-networks:
-  web-app-network:
