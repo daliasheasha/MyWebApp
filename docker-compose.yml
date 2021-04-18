@@ -1,12 +1,10 @@
-version: '3'
+version: "3"
 services:
   my-web-app-db:
     image: mysql
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=myDB
-    ports:
-    - "3306:3306"
   my-web-app:
     build: .
     ports:
