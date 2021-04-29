@@ -8,11 +8,11 @@
 <h1><%= "Important Form" %>
 </h1>
 <br/>
-<form method="post" action="my-servlet">
+<form method="post" action="my-servlet" autocomplete="off">
     <label for="name">What's your name?</label><br>
     <input type="text" id="name" name="name"><br>
     <label for="favFruit">What's your favorite fruit?</label><br>
-    <input type="text" id="favFruit" name="favFruit"><br>
+    <input type="text" id="favFruit" name="favFruit"><br><br>
     <input type="submit" value="Submit">
 </form>
 </body>
