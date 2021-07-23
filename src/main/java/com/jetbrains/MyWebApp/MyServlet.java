@@ -3,15 +3,15 @@ package com.jetbrains.MyWebApp;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet(name = "myServlet", value = "/my-servlet")
+@WebServlet("/myServlet")
 public class MyServlet extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -25,8 +25,8 @@ public class MyServlet extends HttpServlet {
         // Demo purposes only - don't do this in production!
         String name = request.getParameter("name");
         String favFruit = request.getParameter("favFruit");
-        String onlyLetters = "[a-zA-Z]+";
-        if(name.matches(onlyLetters) && favFruit.matches(onlyLetters)) {
+        String validationRegex = "^[a-zA-Z\\s]+";
+        if(name.matches(validationRegex) && favFruit.matches(validationRegex)) {
             Person person = new Person();
             person.setName(name);
             person.setFavFruit(favFruit);

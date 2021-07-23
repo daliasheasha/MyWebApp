@@ -1,13 +1,13 @@
 version: "3"
 services:
-  my-web-app-db:
+  app-db:
     image: mysql
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=myDB
-  my-web-app:
+  app:
     build: .
     ports:
       - "8080:8080"
     depends_on:
-      - my-web-app-db
+      - app-db
