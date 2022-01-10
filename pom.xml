@@ -26,12 +26,12 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.5.4.Final</version>
+            <version>6.0.0.Beta3</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.22</version>
+            <version>8.0.25</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
