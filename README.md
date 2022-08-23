@@ -10,3 +10,8 @@ Instructions to get the application up and running:
 4. Access the application at http://localhost:8080/MyWebApp/
 
  [![JetBrains team project](http://jb.gg/badges/team.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+
+
+### Infrastructure model
+
+![Infrastructure model](.infragenie/infrastructure_model.png)
